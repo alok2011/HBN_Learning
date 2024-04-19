@@ -12,7 +12,10 @@ public class Runner {
 	public static void main(String[] args)
 	{
 
-		System.out.println("Java Based Configuration");		
+//===========================Java Based Configuration=========================================
+		
+		
+		
 		Employee Alok = new Employee(6,"Ramakant","Male","Mathura");
 		
 		SessionFactory sf = Hibernate_Configuration.getSessionFactory();
