@@ -16,6 +16,8 @@ public class Runner {
 	{
 		Employee Alok = new Employee(1,"Alok","Male","Noida");
 		
+		System.out.println("Java Based");
+		
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
 		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
 		SessionFactory sf = meta.buildSessionFactory();
