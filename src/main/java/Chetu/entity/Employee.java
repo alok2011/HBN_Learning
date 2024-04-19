@@ -1,10 +1,19 @@
 package Chetu.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Employee 
 {
+	@Id
 	private int id;
+	@Column(name = "E_Name")
 	private String name;
+	@Column(name = "E_Gender")
 	private String gender;
+	@Column(name = "E_Address")
 	private String address;
 	
 	
