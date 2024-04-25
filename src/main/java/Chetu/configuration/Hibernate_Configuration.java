@@ -15,16 +15,17 @@ public class Hibernate_Configuration
 	{
 		Properties ps = new Properties();
 		ps.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
-		ps.put(Environment.URL, "jdbc:mysql://localhost:3306/chetu");
+		ps.put(Environment.URL, "jdbc:mysql://localhost:3306/alok");
 		ps.put("hibernate.connection.username", "root");
 		ps.put(Environment.PASS ,"Alok@2001");
 		ps.put(Environment.SHOW_SQL ,"true");
-		ps.put(Environment.HBM2DDL_AUTO ,"update");
+		ps.put(Environment.HBM2DDL_AUTO ,"create");
 
 				
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().applySettings(ps).build();
 		MetadataSources meta = new MetadataSources(ssr);
 		meta.addAnnotatedClassName("Chetu.entity.Employee");
+		meta.addAnnotatedClassName("Chetu.entity.Address");
 		SessionFactory sf = meta.buildMetadata().buildSessionFactory();
 		
 		return sf;
