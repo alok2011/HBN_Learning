@@ -1,11 +1,12 @@
 package Chetu.entity;
 
-import jakarta.persistence.CascadeType;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Employee 
@@ -14,19 +15,34 @@ public class Employee
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private int id;
-	private String firstname;
-	private String lastname;
+	private String name;
+	private String gender;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	private Address address;
+
+	@OneToMany
+	List<Address> address;
 	
-	public Address getAddress() {
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public List<Address> getAddress()
+	{
 		return address;
 	}
 
-	public void setAddress(Address address) {
+	public void setAddress(List<Address> address) {
 		this.address = address;
 	}
+
+	
 	
 	public Employee()
 	{}
@@ -39,27 +55,27 @@ public class Employee
 		this.id = id;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String gettname() {
+		return name;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setname(String name) {
+		this.name = name;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", address=" + address
-				+ "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 	}
+
 	
 	
 	

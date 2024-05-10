@@ -21,16 +21,7 @@ public class Address
 		this.city = city;
 	}
 
-	@OneToOne(mappedBy = "address")
-	private Employee employee;
 
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
 
 	public int getId() {
 		return id;
