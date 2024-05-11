@@ -19,7 +19,7 @@ public class Employee
 	private String gender;
 	
 
-	@OneToMany
+	@OneToMany(mappedBy = "employee")
 	List<Address> address;
 	
 	

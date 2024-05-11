@@ -16,7 +16,7 @@ public class Runner
 	public static void main(String[] args)
 	{
 
-
+//========================ManyToOneMapping==========================
 		
 		
 		
@@ -24,21 +24,35 @@ public class Runner
 		System.out.println(">>>>>>>>>>>>>>>>>>");
 		Session session1 = Hibernate_Configuration.getSessionFactory().openSession();
 		
-//		save(session1);
+		save(session1);
 		
 		
-//==============Get Addresses On Behalf Of Employee =========================
+//==============Get Addresses On Behalf Of Employee Starts =========================
 		
 		
 		
-		Employee em =  session1.get(Employee.class, 2);
+		Employee em =  session1.get(Employee.class, 1);
 		System.out.println(em);
 		
 		
+//==============Get Addresses On Behalf Of Employee End==============================================================		
+
 		
 		
-//============================================================================		
 		
+//==============Get Employee On Behalf Of Address Starts==============================
+	
+		
+		
+//		Address ad = session1.get(Address.class, 2);
+//		System.out.println(ad);
+//		System.out.println(ad.getEmployee());
+//		session1.close();
+
+		
+		
+		
+//==============Get Employee On Behalf Of Address End==============================
 }
 		
 		
@@ -61,6 +75,12 @@ public class Runner
 			Address a4 = new Address("h-430", "Sector-65");
 			Address a5 = new Address("h-430", "Sector-66");
 
+			a1.setEmployee(e);
+			a2.setEmployee(e);
+			a3.setEmployee(e);
+			a4.setEmployee(e);
+			a5.setEmployee(e);
+			
 			
 			session.persist(a1);
 			session.persist(a2);
