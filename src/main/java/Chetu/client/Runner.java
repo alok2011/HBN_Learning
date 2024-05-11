@@ -24,17 +24,20 @@ public class Runner
 		System.out.println(">>>>>>>>>>>>>>>>>>");
 		Session session1 = Hibernate_Configuration.getSessionFactory().openSession();
 		
-		save(session1);
+//		save(session1);
 		
 		
-//==============Get Address On Behalf Of Employee =========================
+//==============Get Addresses On Behalf Of Employee =========================
 		
 		
 		
-		Employee em =  session1.get(Employee.class, 1);
+		Employee em =  session1.get(Employee.class, 2);
 		System.out.println(em);
-//		System.out.println(em.getAddress());
 		
+		
+		
+		
+//============================================================================		
 		
 }
 		

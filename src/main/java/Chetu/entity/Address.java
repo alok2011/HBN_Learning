@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+
 @Entity
 public class Address
 {
@@ -19,6 +19,10 @@ public class Address
 		super();
 		this.street = street;
 		this.city = city;
+	}
+	public Address()
+	{
+		
 	}
 
 
