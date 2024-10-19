@@ -19,7 +19,7 @@ public class Runner {
 
 //===========================Java Based Configuration=========================================
 
-		Employee Alok = new Employee(2,"Hariom","Male","Noida");
+		Employee Alok = new Employee(1,"Hariom","Male","Noida");
 		
 		SessionFactory sf = Hibernate_Configuration.getSessionFactory();
 		Session session = sf.openSession();
