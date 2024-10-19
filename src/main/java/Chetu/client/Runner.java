@@ -14,6 +14,11 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
+		
+//========================Annotation Based Configuration========================================		
+		
+		
+		
 		Employee Alok = new Employee(1,"Shruti","Female","Noida");
 		
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
