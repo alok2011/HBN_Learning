@@ -30,24 +30,11 @@ public class Runner {
 		
 		
 		
-//==========================Annotation Based Configuration===================================		
+
 		
 		
 		
-		
-//		Employee Alok = new Employee(7,"kaushal","Female","Bhadohi");
-//		
-//
-//		
-//		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
-//		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
-//		SessionFactory sf = meta.buildSessionFactory();
-//		Session session = sf.openSession();
-//		Transaction tx = session.beginTransaction();
-//		
-//		session.persist(Alok);
-//		tx.commit();
-		
+
 		
 		
 		
