@@ -19,7 +19,7 @@ public class Runner {
 		
 		
 		
-//		Employee Alok = new Employee("Kavya","Female","Noida");
+//		Employee Alok = new Employee("Shruti","Female","Noida");
 		
 		SessionFactory sf = Hibernate_Configuration.getSessionFactory();
 		Session session = sf.openSession();
@@ -45,7 +45,7 @@ public class Runner {
 		
 //		Query q=session.createQuery("update Employee set name=:n where id=:i");  
 //		q.setParameter("n","Udit kumar");  
-//		q.setParameter("i",1);  
+//		q.setParameter("i",5);  
 //		System.out.println("status: "+q.executeUpdate());  	
 //		tx.commit();
 		
@@ -93,11 +93,7 @@ public class Runner {
 		
 //		Employee e = session.load(Employee.class, 2);
 //		System.out.println(e);
-//		
-//		
-		
-		
-
+	
 		
 
 		
