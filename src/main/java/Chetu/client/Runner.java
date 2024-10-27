@@ -18,14 +18,22 @@ public class Runner {
 //===============HQL=================HQL======================HQL===================
 		
 		
+// Ensure that atleats 10 entry should be done in this table, if 10 entries are not available then provide it.		
 		
-//		Employee Alok = new Employee("Shruti","Female","Noida");
+		
+		
+		
+		
+		
+		
+		
+	//	Employee Alok = new Employee("zeeshan","Male","Noida");
 		
 		SessionFactory sf = Hibernate_Configuration.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
-//		session.persist(Alok);
-//		tx.commit();
+	//	session.persist(Alok);
+	//	tx.commit();
 	
 		
 
@@ -45,7 +53,7 @@ public class Runner {
 		
 //		Query q=session.createQuery("update Employee set name=:n where id=:i");  
 //		q.setParameter("n","Udit kumar");  
-//		q.setParameter("i",5);  
+//		q.setParameter("i",9);  
 //		System.out.println("status: "+q.executeUpdate());  	
 //		tx.commit();
 		
