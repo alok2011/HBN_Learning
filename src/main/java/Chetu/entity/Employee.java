@@ -2,8 +2,25 @@ package Chetu.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 
-@Entity
+@NamedQuery(
+		name = "Employee.findEmployeeById",
+		query = "from ducat_emp E where E.id > :id"
+		
+		)
+@NamedQuery(
+		name = "Employee.findByGender",
+		query = "select e from ducat_emp e where e.gender = :gender"
+		
+		)
+
+
+
+
+
+
+@Entity(name = "ducat_emp")
 public class Employee 
 {
 	@Id
@@ -23,6 +40,11 @@ public class Employee
 		this.address = address;
 	
 	
+	}
+	
+	public Employee()
+	{
+		
 	}
 
 	public int getId() {
