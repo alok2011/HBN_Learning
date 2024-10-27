@@ -17,19 +17,26 @@ public class Runner {
 	{
 
 
-//===========================Java Based Configuration=========================================
+//====================================Get and Load==========================================
 
-		Employee Alok = new Employee("Ayushi","Female","Noida");
+
+		
+//		Employee Alok = new Employee("Ankit","Male","Noida");
 		
 		SessionFactory sf = Hibernate_Configuration.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
-		session.persist(Alok);
+	//	session.persist(Alok);
+		
+//		Employee e = session.load(Employee.class, 2);
+		Employee e1 = session.get(Employee.class, 3);
+		System.out.println(e1);
 		tx.commit();
 		
 		
 		
-		
+		/* It Requires Non-Parameterized Constructor, if your class have parameterized
+		  constructor and it also contain at least 5 entry in table */
 
 		
 		

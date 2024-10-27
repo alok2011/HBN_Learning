@@ -12,9 +12,7 @@ public class Employee
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name = "E_Name")
 	private String name;
-	@Column(name = "E_Gender")
 	private String gender;
 	@Column(name = "E_Address")
 	private String address;
@@ -29,6 +27,12 @@ public class Employee
 		this.address = address;
 	
 	
+	}
+	
+	public Employee() 
+	{
+		super();
+		
 	}
 
 	public int getId() {
