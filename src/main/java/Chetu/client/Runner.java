@@ -14,7 +14,7 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-		Employee Alok = new Employee(2,"Ramakant","Male","Noida");
+		Employee Alok = new Employee(1,"Ramakant","Male","Noida");
 		
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
 		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
@@ -25,6 +25,10 @@ public class Runner {
 		session.persist(Alok);
 		tx.commit();
 		
+		
+		
+//		Employee e = session.get(Employee.class, 1);
+//		System.out.println(e);
 		
 		
 		
