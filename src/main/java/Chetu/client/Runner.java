@@ -24,15 +24,15 @@ public class Runner
 		System.out.println(">>>>>>>>>>>>>>>>>>");
 		Session session1 = Hibernate_Configuration.getSessionFactory().openSession();
 		
-//		save(session1);
+		save(session1);
 		
 		
 //==============Get Addresses On Behalf Of Employee =========================
 		
 		
 		
-		Employee em =  session1.get(Employee.class, 2);
-		System.out.println(em);
+//		Employee em =  session1.get(Employee.class, 1);
+//		System.out.println(em);
 		
 		
 		
@@ -53,13 +53,13 @@ public class Runner
 			Transaction transaction = session.getTransaction();
 			transaction.begin();
 			Employee e = new Employee();
-			e.setname("Alok Tiwari");
-			e.setGender("Male");
-			Address a1 = new Address("h-430", "Sector-62");
-			Address a2 = new Address("h-432", "Sector-63");
-			Address a3 = new Address("h-430", "Sector-64");
-			Address a4 = new Address("h-430", "Sector-65");
-			Address a5 = new Address("h-430", "Sector-66");
+			e.setName("Stuti Tripathi");
+			e.setGender("Female");
+			Address a1 = new Address("h-430", "Sector-61");
+			Address a2 = new Address("h-430", "Sector-62");
+			Address a3 = new Address("h-430", "Sector-63");
+			Address a4 = new Address("h-430", "Sector-64");
+			Address a5 = new Address("h-430", "Sector-65");
 
 			
 			session.persist(a1);

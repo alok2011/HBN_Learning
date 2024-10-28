@@ -13,7 +13,6 @@ public class Employee
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private int id;
 	private String name;
 	private String gender;
@@ -22,30 +21,10 @@ public class Employee
 	@OneToMany
 	List<Address> address;
 	
-	
-	
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public List<Address> getAddress()
-	{
-		return address;
-	}
-
-	public void setAddress(List<Address> address) {
-		this.address = address;
-	}
-
-	
-	
 	public Employee()
-	{}
+	{
+		
+	}	
 
 	public int getId() {
 		return id;
@@ -55,11 +34,11 @@ public class Employee
 		this.id = id;
 	}
 
-	public String gettname() {
+	public String getName() {
 		return name;
 	}
 
-	public void setname(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -69,6 +48,15 @@ public class Employee
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	
+	public List<Address> getAddress()
+	{
+		return address;
+	}
+
+	public void setAddress(List<Address> address) {
+		this.address = address;
 	}
 
 	@Override
