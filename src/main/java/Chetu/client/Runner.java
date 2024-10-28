@@ -31,8 +31,8 @@ public class Runner
 		
 		
 		
-		Employee em =  session1.get(Employee.class, 1);
-		System.out.println(em);
+//		Employee em =  session1.get(Employee.class, 1);
+//		System.out.println(em);
 		
 		
 //==============Get Addresses On Behalf Of Employee End==============================================================		
@@ -67,7 +67,7 @@ public class Runner
 			Transaction transaction = session.getTransaction();
 			transaction.begin();
 			Employee e = new Employee();
-			e.setname("Alok Tiwari");
+			e.setName("Pancham Singh");
 			e.setGender("Male");
 			Address a1 = new Address("h-430", "Sector-62");
 			Address a2 = new Address("h-432", "Sector-63");
