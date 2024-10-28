@@ -20,6 +20,10 @@ public class Address
 		this.street = street;
 		this.city = city;
 	}
+	public Address() {
+		
+	}
+	
 
 	@OneToOne(mappedBy = "address")
 	private Employee employee;
