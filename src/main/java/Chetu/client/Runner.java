@@ -14,14 +14,11 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-
-//==================Get Records From Tables===========================	
-		
-		
 		
 		
 		System.out.println(">>>>>>>>>>>>>>>>>>");
 		Session session1 = Hibernate_Configuration.getSessionFactory().openSession();
+		
 		save(session1);
 
 		
